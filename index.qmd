@@ -1,0 +1,41 @@
+---
+title: "IoT H3"
+subtitle: "Internet of things, på hovedforløb 3"
+Institute: TEC
+lang: da-DK
+---
+
+# IoT, første del
+
+På Programmeringsspecialet, er IoT faget opdelt så de første to uger er på H3. De næste to uger afvikles på H4.
+
+Ved slutningen af første de, bedømmes eleverne med en delkarakter. Når anden del afsluttes, bedømmes del 1 og del 2 samlet med en standpunktskarakter.
+
+## Introduktion
+
+### Development Boards
+
+-   Arduino
+-   Esp32
+
+Vi bruger `ESP32-DEVKIT-V1` \[foto\]
+
+### Breadbords
+
+\[billede\]
+
+På breadboardet kan vi opbygge en konstruktion med både CPU og Sensorer og Aktustorer
+
+For at få plads til det udviklingsbord vi råder over, skal vi bruge en speciel konstruktion med to (2) breadborads som er sat sammen. På den måde kan vi forbinde til benene begge sider af udviklingsborded.
+
+\[billede\]
+
+### Sensorer og aktuatorer
+
+Hvad en sensor og en aktuator er...
+
+### Udviklimgsmiljø
+
+Visula Studio med extension
+
+## Øvelser

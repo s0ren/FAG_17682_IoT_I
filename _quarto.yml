@@ -1,0 +1,30 @@
+project:
+  title: "17682 Iot og embeddede systemer, del 1"
+  type: website
+  output-dir: output
+  # Date: "2024-11-25"
+  # Author: "Søren Magnusson"
+  # affiliation: "TEC"
+  
+
+website:
+  title: "17682 Iot og embeddede systemer, del 1"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+    #  - about.qmd
+    sidebar:
+      contents: auto
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    lang: da
+
+
+
