@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "readme.html",
+    "href": "readme.html",
+    "title": "17682 Iot og embeddede systemer, del 1",
+    "section": "",
+    "text": "Det her site er lavet med Quarto.\nPt er sigtet at overgå til C3 ved hjelp af nanoFramework. Og det kommer der sikker en masse udfordringer med.\nSe playbook.md om hvordan denne dokumentation er bygget op. Demoerne er i et ander repo: …"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "IoT H3",
+    "section": "",
+    "text": "På Programmeringsspecialet, er IoT faget opdelt så de første to uger er på H3. De næste to uger afvikles på H4.\nVed slutningen af første de, bedømmes eleverne med en delkarakter. Når anden del afsluttes, bedømmes del 1 og del 2 samlet med en standpunktskarakter.\n\n\n\n\n\nArduino\nEsp32\n\nVi bruger ESP32-DEVKIT-V1 [foto]\n\n\n\n[billede]\nPå breadboardet kan vi opbygge en konstruktion med både CPU og Sensorer og Aktustorer\nFor at få plads til det udviklingsbord vi råder over, skal vi bruge en speciel konstruktion med to (2) breadborads som er sat sammen. På den måde kan vi forbinde til benene begge sider af udviklingsborded.\n[billede]\n\n\n\nHvad en sensor og en aktuator er…\n\n\n\nVisula Studio med extension"
+  },
+  {
+    "objectID": "index.html#introduktion",
+    "href": "index.html#introduktion",
+    "title": "IoT H3",
+    "section": "",
+    "text": "Arduino\nEsp32\n\nVi bruger ESP32-DEVKIT-V1 [foto]\n\n\n\n[billede]\nPå breadboardet kan vi opbygge en konstruktion med både CPU og Sensorer og Aktustorer\nFor at få plads til det udviklingsbord vi råder over, skal vi bruge en speciel konstruktion med to (2) breadborads som er sat sammen. På den måde kan vi forbinde til benene begge sider af udviklingsborded.\n[billede]\n\n\n\nHvad en sensor og en aktuator er…\n\n\n\nVisula Studio med extension"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "playbook.html",
+    "href": "playbook.html",
+    "title": "17682 Iot og embeddede systemer, del 1",
+    "section": "",
+    "text": "ctrl-p, quarto: Create New Project."
+  },
+  {
+    "objectID": "playbook.html#website-oprettet-med-quarto",
+    "href": "playbook.html#website-oprettet-med-quarto",
+    "title": "17682 Iot og embeddede systemer, del 1",
+    "section": "",
+    "text": "ctrl-p, quarto: Create New Project."
+  },
+  {
+    "objectID": "playbook.html#tilføj-git-og-put-på-github",
+    "href": "playbook.html#tilføj-git-og-put-på-github",
+    "title": "17682 Iot og embeddede systemer, del 1",
+    "section": "Tilføj git og put på github",
+    "text": "Tilføj git og put på github\nVælg Source Control ikonet længst til venstre, og tryk Publish to GitHub."
+  },
+  {
+    "objectID": "playbook.html#for-at-publicere-på-github-pages",
+    "href": "playbook.html#for-at-publicere-på-github-pages",
+    "title": "17682 Iot og embeddede systemer, del 1",
+    "section": "For at publicere på github pages",
+    "text": "For at publicere på github pages\nkørete alle disse:\ngit checkout --orphan gh-pages\ngit reset --hard # make sure all changes are committed before running this!\ngit commit --allow-empty -m \"Initialising gh-pages branch\"\ngit push origin gh-pages\nog skiftede tilbage til"
+  }
+]
