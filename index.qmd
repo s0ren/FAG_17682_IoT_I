@@ -63,4 +63,6 @@ Her skal programmet få den indbyggede LED på ESP32'eren til at blinke..
 
 Her skal vi bygge på breadboardet.
 
+![](assets/esp32_doit_diode_pushbotton_pulldown_bb.svg)
+
 Øvelse 3b - Andre timing strategier.
