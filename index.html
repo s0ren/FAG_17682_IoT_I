@@ -121,7 +121,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sensorer-og-aktuatorer" id="toc-sensorer-og-aktuatorer" class="nav-link" data-scroll-target="#sensorer-og-aktuatorer">Sensorer og aktuatorer</a></li>
   <li><a href="#udviklimgsmiljø" id="toc-udviklimgsmiljø" class="nav-link" data-scroll-target="#udviklimgsmiljø">Udviklimgsmiljø</a></li>
   </ul></li>
-  <li><a href="#øvelser" id="toc-øvelser" class="nav-link" data-scroll-target="#øvelser">Øvelser</a></li>
+  <li><a href="#øvelser" id="toc-øvelser" class="nav-link" data-scroll-target="#øvelser">Øvelser</a>
+  <ul class="collapse">
+  <li><a href="#øvelse-1---hello-world" id="toc-øvelse-1---hello-world" class="nav-link" data-scroll-target="#øvelse-1---hello-world">Øvelse 1 - Hello world</a></li>
+  <li><a href="#øvelse-2---hello-blink" id="toc-øvelse-2---hello-blink" class="nav-link" data-scroll-target="#øvelse-2---hello-blink">Øvelse 2 - Hello, blink</a></li>
+  <li><a href="#øvelse-3---hello-blink-med-en-ekstern-lysdiode-led" id="toc-øvelse-3---hello-blink-med-en-ekstern-lysdiode-led" class="nav-link" data-scroll-target="#øvelse-3---hello-blink-med-en-ekstern-lysdiode-led">Øvelse 3 - Hello, blink med en ekstern lysdiode (LED)</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -176,13 +181,31 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="udviklimgsmiljø" class="level3">
 <h3 class="anchored" data-anchor-id="udviklimgsmiljø">Udviklimgsmiljø</h3>
-<p>Visula Studio med extension</p>
+<p>Som noget helt nyt, skal vi prøve at lave forløbet, på en måde hvor vi programmerer i C#!</p>
+<p>Det har nogen åbenlyse fordele, i læringsprocessen, at det ikke er nødvendigt at skifte programmeringssprog. Samtidig går vi glib af nyttig læring ved netop at lære et et nyt sprog (c++ eller python). Desuden er der en risiko for at frameworket ikke understøtter de funktionaliteter vi skal bruge for at lave en fornuftig IoT løsning.</p>
+<p>I dette forløb bruger vi <a href="https://nanoframework.net/">nanoFramework</a>.</p>
+<p>Se vejledningen her viser hvor og hvordan man <a href="https://docs.nanoframework.net/content/getting-started-guides/getting-started-managed.html">installerer deres extension til Visual Studio</a>.<br>
+I vejledninger er der nogle trin som beskriver hvor dan man lægger et nyt firmware image på IoT enheden. Dette trin har jeg klaret, så der allerede nanoFrameworks firmware på dimserne. __I behøver altså <em>ikke</em> installere <code>nanoff</code> og opdatere firmware__. Det kan vi muligvis komme tilbage til, men bliver sikkert ikke nødvendigt.</p>
+<p>Der er også en <a href="https://docs.nanoframework.net/content/getting-started-guides/getting-started-vs-code.html">udviddelse til Visual Studio Code</a>, men med mindre support.</p>
 </section>
 </section>
 <section id="øvelser" class="level2">
 <h2 class="anchored" data-anchor-id="øvelser">Øvelser</h2>
+<section id="øvelse-1---hello-world" class="level3">
+<h3 class="anchored" data-anchor-id="øvelse-1---hello-world">Øvelse 1 - Hello world</h3>
+<p>Den første øvelser går ud på at oprette et projekt til nanoFramework, skrive et lille program, som skriver lidt i Debug vinduet.</p>
+</section>
+<section id="øvelse-2---hello-blink" class="level3">
+<h3 class="anchored" data-anchor-id="øvelse-2---hello-blink">Øvelse 2 - Hello, blink</h3>
+<p>Her skal programmet få den indbyggede LED på ESP32’eren til at blinke..</p>
+</section>
+<section id="øvelse-3---hello-blink-med-en-ekstern-lysdiode-led" class="level3">
+<h3 class="anchored" data-anchor-id="øvelse-3---hello-blink-med-en-ekstern-lysdiode-led">Øvelse 3 - Hello, blink med en ekstern lysdiode (LED)</h3>
+<p>Her skal vi bygge på breadboardet.</p>
+<p>Øvelse 3b - Andre timing strategier.</p>
 
 
+</section>
 </section>
 </section>
 
