@@ -15,4 +15,10 @@ kørete alle disse:
     git commit --allow-empty -m "Initialising gh-pages branch"
     git push origin gh-pages
 
-og skiftede tilbage til 
+og skiftede tilbage til main branch
+
+Herfra kan man publisere med kommandoen
+
+    quarto publish gh-pages
+
+Svar __`Yes`__

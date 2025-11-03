@@ -36,6 +36,29 @@ Hvad en sensor og en aktuator er...
 
 ### Udviklimgsmiljø
 
-Visula Studio med extension
+Som noget helt nyt, skal vi prøve at lave forløbet, på en måde hvor vi programmerer i C#!
+
+Det har nogen åbenlyse fordele, i læringsprocessen, at det ikke er nødvendigt at skifte programmeringssprog. Samtidig går vi glib af nyttig læring ved netop at lære et et nyt sprog (c++ eller python). Desuden er der en risiko for at frameworket ikke understøtter de funktionaliteter vi skal bruge for at lave en fornuftig IoT løsning.
+
+I dette forløb bruger vi [nanoFramework](https://nanoframework.net/).
+
+Se vejledningen her viser hvor og hvordan man [installerer deres extension til Visual Studio](https://docs.nanoframework.net/content/getting-started-guides/getting-started-managed.html).\
+I vejledninger er der nogle trin som beskriver hvor dan man lægger et nyt firmware image på IoT enheden. Dette trin har jeg klaret, så der allerede nanoFrameworks firmware på dimserne. \_\_I behøver altså *ikke* installere `nanoff` og opdatere firmware\_\_. Det kan vi muligvis komme tilbage til, men bliver sikkert ikke nødvendigt.
+
+Der er også en [udviddelse til Visual Studio Code](https://docs.nanoframework.net/content/getting-started-guides/getting-started-vs-code.html), men med mindre support.
 
 ## Øvelser
+
+### Øvelse 1 - Hello world
+
+Den første øvelser går ud på at oprette et projekt til nanoFramework, skrive et lille program, som skriver lidt i Debug vinduet.
+
+### Øvelse 2 - Hello, blink
+
+Her skal programmet få den indbyggede LED på ESP32'eren til at blinke..
+
+### Øvelse 3 - Hello, blink med en ekstern lysdiode (LED)
+
+Her skal vi bygge på breadboardet.
+
+Øvelse 3b - Andre timing strategier.
