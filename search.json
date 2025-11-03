@@ -53,6 +53,6 @@
     "href": "playbook.html#for-at-publicere-på-github-pages",
     "title": "17682 Iot og embeddede systemer, del 1",
     "section": "For at publicere på github pages",
-    "text": "For at publicere på github pages\nkørete alle disse:\ngit checkout --orphan gh-pages\ngit reset --hard # make sure all changes are committed before running this!\ngit commit --allow-empty -m \"Initialising gh-pages branch\"\ngit push origin gh-pages\nog skiftede tilbage til"
+    "text": "For at publicere på github pages\nkørete alle disse:\ngit checkout --orphan gh-pages\ngit reset --hard # make sure all changes are committed before running this!\ngit commit --allow-empty -m \"Initialising gh-pages branch\"\ngit push origin gh-pages\nog skiftede tilbage til main branch\nHerfra kan man publisere med kommandoen"
   }
 ]
