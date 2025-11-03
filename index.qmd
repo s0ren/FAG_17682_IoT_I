@@ -49,6 +49,8 @@ Der er også en [udviddelse til Visual Studio Code](https://docs.nanoframework.n
 
 ## Øvelser
 
+Souce kode til visse øvelser ligger på <https://github.com/s0ren/intro_til-IOT_med-CS>
+
 ### Øvelse 1 - Hello world
 
 Den første øvelser går ud på at oprette et projekt til nanoFramework, skrive et lille program, som skriver lidt i Debug vinduet.
