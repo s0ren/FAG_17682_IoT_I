@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -119,13 +154,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#development-boards" id="toc-development-boards" class="nav-link" data-scroll-target="#development-boards">Development Boards</a></li>
   <li><a href="#breadbords" id="toc-breadbords" class="nav-link" data-scroll-target="#breadbords">Breadbords</a></li>
   <li><a href="#sensorer-og-aktuatorer" id="toc-sensorer-og-aktuatorer" class="nav-link" data-scroll-target="#sensorer-og-aktuatorer">Sensorer og aktuatorer</a></li>
-  <li><a href="#udviklimgsmiljø" id="toc-udviklimgsmiljø" class="nav-link" data-scroll-target="#udviklimgsmiljø">Udviklimgsmiljø</a></li>
+  <li><a href="#udviklingsmiljø" id="toc-udviklingsmiljø" class="nav-link" data-scroll-target="#udviklingsmiljø">Udviklingsmiljø</a></li>
   </ul></li>
   <li><a href="#øvelser" id="toc-øvelser" class="nav-link" data-scroll-target="#øvelser">Øvelser</a>
   <ul class="collapse">
   <li><a href="#øvelse-1---hello-world" id="toc-øvelse-1---hello-world" class="nav-link" data-scroll-target="#øvelse-1---hello-world">Øvelse 1 - Hello world</a></li>
   <li><a href="#øvelse-2---hello-blink" id="toc-øvelse-2---hello-blink" class="nav-link" data-scroll-target="#øvelse-2---hello-blink">Øvelse 2 - Hello, blink</a></li>
   <li><a href="#øvelse-3---hello-blink-med-en-ekstern-lysdiode-led" id="toc-øvelse-3---hello-blink-med-en-ekstern-lysdiode-led" class="nav-link" data-scroll-target="#øvelse-3---hello-blink-med-en-ekstern-lysdiode-led">Øvelse 3 - Hello, blink med en ekstern lysdiode (LED)</a></li>
+  <li><a href="#øvelse-3b---andre-timing-strategier." id="toc-øvelse-3b---andre-timing-strategier." class="nav-link" data-scroll-target="#øvelse-3b---andre-timing-strategier.">Øvelse 3b - Andre timing strategier.</a></li>
+  <li><a href="#øvelse-3d---ekstra-led" id="toc-øvelse-3d---ekstra-led" class="nav-link" data-scroll-target="#øvelse-3d---ekstra-led">Øvelse 3d - Ekstra LED</a></li>
+  <li><a href="#øvelse-4---input-fra-trykknap" id="toc-øvelse-4---input-fra-trykknap" class="nav-link" data-scroll-target="#øvelse-4---input-fra-trykknap">Øvelse 4 - Input fra trykknap</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -170,17 +208,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="breadbords" class="level3">
 <h3 class="anchored" data-anchor-id="breadbords">Breadbords</h3>
-<p>[billede]</p>
+<p><img src="./assets/DSC_0233 (2).JPG" class="img-fluid"></p>
 <p>På breadboardet kan vi opbygge en konstruktion med både CPU og Sensorer og Aktustorer</p>
 <p>For at få plads til det udviklingsbord vi råder over, skal vi bruge en speciel konstruktion med to (2) breadborads som er sat sammen. På den måde kan vi forbinde til benene begge sider af udviklingsborded.</p>
-<p>[billede]</p>
+<p>[billede] <img src="assets/IMG20251101133822.jpg" class="img-fluid"></p>
+<p><img src="assets/IMG20251101134035.jpg" class="img-fluid"></p>
 </section>
 <section id="sensorer-og-aktuatorer" class="level3">
 <h3 class="anchored" data-anchor-id="sensorer-og-aktuatorer">Sensorer og aktuatorer</h3>
 <p>Hvad en sensor og en aktuator er…</p>
 </section>
-<section id="udviklimgsmiljø" class="level3">
-<h3 class="anchored" data-anchor-id="udviklimgsmiljø">Udviklimgsmiljø</h3>
+<section id="udviklingsmiljø" class="level3">
+<h3 class="anchored" data-anchor-id="udviklingsmiljø">Udviklingsmiljø</h3>
 <p>Som noget helt nyt, skal vi prøve at lave forløbet, på en måde hvor vi programmerer i C#!</p>
 <p>Det har nogen åbenlyse fordele, i læringsprocessen, at det ikke er nødvendigt at skifte programmeringssprog. Samtidig går vi glib af nyttig læring ved netop at lære et et nyt sprog (c++ eller python). Desuden er der en risiko for at frameworket ikke understøtter de funktionaliteter vi skal bruge for at lave en fornuftig IoT løsning.</p>
 <p>I dette forløb bruger vi <a href="https://nanoframework.net/">nanoFramework</a>.</p>
@@ -194,17 +233,126 @@ I vejledninger er der nogle trin som beskriver hvor dan man lægger et nyt firmw
 <p>Souce kode til visse øvelser ligger på <a href="https://github.com/s0ren/intro_til-IOT_med-CS" class="uri">https://github.com/s0ren/intro_til-IOT_med-CS</a></p>
 <section id="øvelse-1---hello-world" class="level3">
 <h3 class="anchored" data-anchor-id="øvelse-1---hello-world">Øvelse 1 - Hello world</h3>
-<p>Den første øvelser går ud på at oprette et projekt til nanoFramework, skrive et lille program, som skriver lidt i Debug vinduet.</p>
+<p>Den første øvelse går ud på at oprette et projekt til nanoFramework og afvikle default skabelonen. Et lille program, som skriver en tekst i Debug vinduet.</p>
+<p>Du skal montere ESP32 DEVKIT V1 udviklingsboardet på et dobbelt breadboar som vist her:</p>
+<p><img src="assets/esp32_doit_bb.svg" class="img-fluid"></p>
+<p>Når du opretter projektet, skulle der gerne være en <code>program.cs</code> med dette:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cs code-with-copy"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">Diagnostics</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">Threading</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">namespace</span> hejsa</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">class</span> Program</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">public</span> <span class="kw">static</span> <span class="dt">void</span> <span class="fu">Main</span><span class="op">()</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            Debug<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Hello from nanoFramework!"</span><span class="op">);</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            Thread<span class="op">.</span><span class="fu">Sleep</span><span class="op">(</span>Timeout<span class="op">.</span><span class="fu">Infinite</span><span class="op">);</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="øvelse-2---hello-blink" class="level3">
 <h3 class="anchored" data-anchor-id="øvelse-2---hello-blink">Øvelse 2 - Hello, blink</h3>
-<p>Her skal programmet få den indbyggede LED på ESP32’eren til at blinke..</p>
+<p>Opret et ny <strong>project</strong>, i samme <strong>solution</strong> ved at højreklikke på din <em>solution</em> (øverst i <strong>Solution Explorer</strong>), vælg <strong>Add</strong> og <strong>New Project..</strong>, sørg for at templaten er <strong>Blank Application (.NET nanoFramework)</strong>.</p>
+<p>Her skal programmet få den indbyggede LED på ESP32’eren til at blinke. Derfor er der ikke brug for at ændre opstillingen på breadboardet. Bare brug den samme opstilling som ovenfor.</p>
+<p>Sørg for at denne kode fungerer:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode cs code-with-copy"><code class="sourceCode cs"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">Diagnostics</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">Threading</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">Device</span><span class="op">.</span><span class="fu">Gpio</span><span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">namespace</span> Blink1</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">class</span> Program</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">public</span> <span class="kw">static</span> <span class="dt">void</span> <span class="fu">Main</span><span class="op">()</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>            Debug<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Hello from nanoFramework!"</span><span class="op">);</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>            <span class="dt">int</span> PinNumber <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>            GpioPin bultinLED <span class="op">=</span> <span class="kw">new</span> <span class="fu">GpioController</span><span class="op">().</span><span class="fu">OpenPin</span><span class="op">(</span>PinNumber<span class="op">,</span> PinMode<span class="op">.</span><span class="fu">Output</span><span class="op">);</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>            <span class="kw">while</span> <span class="op">(</span><span class="kw">true</span><span class="op">)</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>            <span class="op">{</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Turn on the LED (assuming an active high configuration)</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                bultinLED<span class="op">.</span><span class="fu">Write</span><span class="op">(</span>PinValue<span class="op">.</span><span class="fu">High</span><span class="op">);</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                Thread<span class="op">.</span><span class="fu">Sleep</span><span class="op">(</span><span class="dv">500</span><span class="op">);</span> <span class="co">// Keep the LED on for 500 milliseconds</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Turn off the LED</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>                bultinLED<span class="op">.</span><span class="fu">Write</span><span class="op">(</span>PinValue<span class="op">.</span><span class="fu">Low</span><span class="op">);</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>                Thread<span class="op">.</span><span class="fu">Sleep</span><span class="op">(</span><span class="dv">500</span><span class="op">);</span> <span class="co">// Keep the LED off for 500 milliseconds</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>            Thread<span class="op">.</span><span class="fu">Sleep</span><span class="op">(</span>Timeout<span class="op">.</span><span class="fu">Infinite</span><span class="op">);</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Bemærk</strong> at koden også gør brug af namespacet <code>System.Device.Gpio</code>. Dette findes i en pakke fra <em>nanoFramework</em> som skal tilføjes til projektet.</p>
+<ol type="1">
+<li>Højre-klik på dit projekt</li>
+<li>vælg <strong>Manage NuGet Packages…</strong></li>
+<li><img src="images/paste-1.png" class="img-fluid"></li>
+<li>Vælg <strong>Browse</strong></li>
+<li>Søg evt på <code>nanoFramework.sys</code></li>
+<li>tryk <strong>Install</strong></li>
+</ol>
 </section>
 <section id="øvelse-3---hello-blink-med-en-ekstern-lysdiode-led" class="level3">
 <h3 class="anchored" data-anchor-id="øvelse-3---hello-blink-med-en-ekstern-lysdiode-led">Øvelse 3 - Hello, blink med en ekstern lysdiode (LED)</h3>
 <p>Her skal vi bygge på breadboardet.</p>
+<p><img src="assets/esp32_doit_LED_bb.svg" class="img-fluid"></p>
+<p>Det nye er at:</p>
+<ul>
+<li>der skal være en LED på breadbordet, som skal styres fra boarded.</li>
+<li>LED’en skal beskyttes mod overspænding med en modstand på 220 ohm.</li>
+<li>Den positive side af LED’en, det ben der er længst, skal forbindes til pin 18 (via modstanden)</li>
+<li>LED’ens andet ben skal forbindes til stel. På engelsk Ground eller GND.</li>
+</ul>
+<p>Programkoden er næsten den samme, blot er <code>PinNumber</code> sat til at være <code>18</code> i stedet for <code>2</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode cs code-with-copy"><code class="sourceCode cs"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">Device</span><span class="op">.</span><span class="fu">Gpio</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">Diagnostics</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">Threading</span><span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">namespace</span> Blink2_pin18</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">class</span> Program</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">public</span> <span class="kw">static</span> <span class="dt">void</span> <span class="fu">Main</span><span class="op">()</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            Debug<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Hello from nanoFramework! With police blink blink"</span><span class="op">);</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>            <span class="dt">int</span> PinNumber <span class="op">=</span> <span class="dv">18</span><span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>            GpioPin bultinLED <span class="op">=</span> <span class="kw">new</span> <span class="fu">GpioController</span><span class="op">().</span><span class="fu">OpenPin</span><span class="op">(</span>PinNumber<span class="op">,</span> PinMode<span class="op">.</span><span class="fu">Output</span><span class="op">);</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>            <span class="kw">while</span> <span class="op">(</span><span class="kw">true</span><span class="op">)</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>            <span class="op">{</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Turn on the LED (assuming an active high configuration)</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                bultinLED<span class="op">.</span><span class="fu">Write</span><span class="op">(</span>PinValue<span class="op">.</span><span class="fu">High</span><span class="op">);</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>                Thread<span class="op">.</span><span class="fu">Sleep</span><span class="op">(</span><span class="dv">500</span><span class="op">);</span> <span class="co">// Keep the LED on for 500 milliseconds</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Turn off the LED</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>                bultinLED<span class="op">.</span><span class="fu">Write</span><span class="op">(</span>PinValue<span class="op">.</span><span class="fu">Low</span><span class="op">);</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>                Thread<span class="op">.</span><span class="fu">Sleep</span><span class="op">(</span><span class="dv">500</span><span class="op">);</span> <span class="co">// Keep the LED off for 500 milliseconds</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Kopier til udklipsholder" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="øvelse-3b---andre-timing-strategier." class="level3">
+<h3 class="anchored" data-anchor-id="øvelse-3b---andre-timing-strategier.">Øvelse 3b - Andre timing strategier.</h3>
+</section>
+<section id="øvelse-3d---ekstra-led" class="level3">
+<h3 class="anchored" data-anchor-id="øvelse-3d---ekstra-led">Øvelse 3d - Ekstra LED</h3>
+</section>
+<section id="øvelse-4---input-fra-trykknap" class="level3">
+<h3 class="anchored" data-anchor-id="øvelse-4---input-fra-trykknap">Øvelse 4 - Input fra trykknap</h3>
 <p><img src="assets/esp32_doit_diode_pushbotton_pulldown_bb.svg" class="img-fluid"></p>
-<p>Øvelse 3b - Andre timing strategier.</p>
 
 
 </section>
