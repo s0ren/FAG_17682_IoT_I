@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 Det her site er lavet med Quarto.
 
 Pt er sigtet at overgå til C3 ved hjelp af nanoFramework. Og det kommer der sikker en masse udfordringer med.

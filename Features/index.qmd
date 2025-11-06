@@ -1,0 +1,9 @@
+---
+title: "Features"
+format: html
+---
+
+Her finder du nogle vejledninger af ting som man kan med ESP32 og nanoFramework.
+Nogle af disse features er indbyggede (f.eks. wifi) andre kræver ekstra eletroniske dimser tilsluttet.
+
+Se sidebar-menuen.
