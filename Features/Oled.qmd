@@ -67,7 +67,7 @@ Med Project -\> Manage Nuget Packages kan du sørge for at det nødvendige pakke
 </packages>
 ```
 
-**Bemærk**: I sourcen herunder, refereres *også* til namespace'et `using Iot.Device.Ssd13xx.Samples;`, men det er ***ikke*** et assembly eller en NuGet pakke, men bare defineret i to filer, som ligger med i projektet (**BasicFont.cs** og **DoubleByteFont.cs**).
+**Bemærk**: I sourcen herunder, refereres *også* til namespace'et `Iot.Device.Ssd13xx.Samples`, men det er ***ikke*** et assembly eller en NuGet pakke, men derimod defineret i to filer, som ligger med i projektet; `BasicFont.cs` og `DoubleByteFont.cs`.
 
 ### Kode
 
@@ -75,11 +75,8 @@ I demoen initialiseres pin 21 og pin 22, og SSD1306 driveren.\
 Selve OLED driveren fungerer sådan at man
 
 -   renser displayet (med `ClearScreen()`)
-
--   tegner eller skriver noget på display'et (egentlig tegner "bare" i en buffer)
-
+-   tegner eller skriver noget på display'et (egentlig tegner "bare" i en buffer) \
     Her et f.eks. kald til `device.DrawString(2, 2, "nF IOT!", 2)`
-
 -   det man har tegnet eller skrevet, vises på displayet, ved kald til `Display()`.
 
 **Bemærk**: Det er vigtigt at filerne **BasicFont.cs** og **DoubleByteFont.cs** er med, for de definerer namespacet `Iot.Device.Ssd13xx.Samples` og Class `BasicFont` og `DoubleByteFont`. Uden en font kan man ikke skrive tekst og så virker eksemplet ikke.
