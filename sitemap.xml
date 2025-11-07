@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://s0ren.github.io/FAG_17682_IoT_I/readme.html</loc>
-    <lastmod>2025-11-02T22:18:46.435Z</lastmod>
-  </url>
-  <url>
     <loc>https://s0ren.github.io/FAG_17682_IoT_I/index.html</loc>
-    <lastmod>2025-11-03T20:10:32.393Z</lastmod>
+    <lastmod>2025-11-06T14:10:25.420Z</lastmod>
   </url>
   <url>
-    <loc>https://s0ren.github.io/FAG_17682_IoT_I/about.html</loc>
-    <lastmod>2025-11-02T22:18:46.434Z</lastmod>
+    <loc>https://s0ren.github.io/FAG_17682_IoT_I/Features/index.html</loc>
+    <lastmod>2025-11-06T14:22:12.292Z</lastmod>
   </url>
   <url>
-    <loc>https://s0ren.github.io/FAG_17682_IoT_I/playbook.html</loc>
-    <lastmod>2025-11-03T05:47:06.983Z</lastmod>
+    <loc>https://s0ren.github.io/FAG_17682_IoT_I/Features/Oled.html</loc>
+    <lastmod>2025-11-06T15:37:06.069Z</lastmod>
   </url>
 </urlset>

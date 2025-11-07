@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "readme.html",
-    "href": "readme.html",
-    "title": "17682 Iot og embeddede systemer, del 1",
-    "section": "",
-    "text": "Det her site er lavet med Quarto.\nPt er sigtet at overgå til C3 ved hjelp af nanoFramework. Og det kommer der sikker en masse udfordringer med.\nSe playbook.md om hvordan denne dokumentation er bygget op. Demoerne er i et ander repo: …"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "IoT H3",
@@ -28,38 +21,62 @@
     "text": "Souce kode til visse øvelser ligger på https://github.com/s0ren/intro_til-IOT_med-CS\n\n\nDen første øvelse går ud på at oprette et projekt til nanoFramework og afvikle default skabelonen. Et lille program, som skriver en tekst i Debug vinduet.\nDu skal montere ESP32 DEVKIT V1 udviklingsboardet på et dobbelt breadboar som vist her:\n\nNår du opretter projektet, skulle der gerne være en program.cs med dette:\nusing System;\nusing System.Diagnostics;\nusing System.Threading;\n\nnamespace hejsa\n{\n    public class Program\n    {\n        public static void Main()\n        {\n            Debug.WriteLine(\"Hello from nanoFramework!\");\n\n            Thread.Sleep(Timeout.Infinite);\n        }\n    }\n}\n\n\n\nOpret et ny project, i samme solution ved at højreklikke på din solution (øverst i Solution Explorer), vælg Add og New Project.., sørg for at templaten er Blank Application (.NET nanoFramework).\nHer skal programmet få den indbyggede LED på ESP32’eren til at blinke. Derfor er der ikke brug for at ændre opstillingen på breadboardet. Bare brug den samme opstilling som ovenfor.\nSørg for at denne kode fungerer:\nusing System;\nusing System.Diagnostics;\nusing System.Threading;\nusing System.Device.Gpio;\n\n\nnamespace Blink1\n{\n    public class Program\n    {\n        public static void Main()\n        {\n            Debug.WriteLine(\"Hello from nanoFramework!\");\n\n            int PinNumber = 2;\n            GpioPin bultinLED = new GpioController().OpenPin(PinNumber, PinMode.Output);\n            \n            while (true)\n            {\n                // Turn on the LED (assuming an active high configuration)\n                bultinLED.Write(PinValue.High);\n                Thread.Sleep(500); // Keep the LED on for 500 milliseconds\n                \n                // Turn off the LED\n                bultinLED.Write(PinValue.Low);\n                Thread.Sleep(500); // Keep the LED off for 500 milliseconds\n            }\n\n            Thread.Sleep(Timeout.Infinite);\n        }\n    }\n}\nBemærk at koden også gør brug af namespacet System.Device.Gpio. Dette findes i en pakke fra nanoFramework som skal tilføjes til projektet.\n\nHøjre-klik på dit projekt\nvælg Manage NuGet Packages…\n\nVælg Browse\nSøg evt på nanoFramework.sys\ntryk Install\n\n\n\n\nHer skal vi bygge på breadboardet.\n\nDet nye er at:\n\nder skal være en LED på breadbordet, som skal styres fra boarded.\nLED’en skal beskyttes mod overspænding med en modstand på 220 ohm.\nDen positive side af LED’en, det ben der er længst, skal forbindes til pin 18 (via modstanden)\nLED’ens andet ben skal forbindes til stel. På engelsk Ground eller GND.\n\nProgramkoden er næsten den samme, blot er PinNumber sat til at være 18 i stedet for 2:\nusing System;\nusing System.Device.Gpio;\nusing System.Diagnostics;\nusing System.Threading;\n\nnamespace Blink2_pin18\n{\n    public class Program\n    {\n        public static void Main()\n        {\n            Debug.WriteLine(\"Hello from nanoFramework! With police blink blink\");\n\n            int PinNumber = 18;\n            GpioPin bultinLED = new GpioController().OpenPin(PinNumber, PinMode.Output);\n            \n            while (true)\n            {\n                \n                // Turn on the LED (assuming an active high configuration)\n                bultinLED.Write(PinValue.High);\n                Thread.Sleep(500); // Keep the LED on for 500 milliseconds\n\n                // Turn off the LED\n                bultinLED.Write(PinValue.Low);\n                Thread.Sleep(500); // Keep the LED off for 500 milliseconds\n            }\n        }\n    }\n}"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "Features/index.html",
+    "href": "Features/index.html",
+    "title": "Features",
     "section": "",
-    "text": "About this site"
+    "text": "Her finder du nogle vejledninger af ting som man kan med ESP32 og nanoFramework. Nogle af disse features er indbyggede (f.eks. wifi) andre kræver ekstra eletroniske dimser tilsluttet.\nSe sidebar-menuen.",
+    "crumbs": [
+      "Home",
+      "Features"
+    ]
   },
   {
-    "objectID": "playbook.html",
-    "href": "playbook.html",
-    "title": "17682 Iot og embeddede systemer, del 1",
+    "objectID": "Features/Oled.html",
+    "href": "Features/Oled.html",
+    "title": "Oled display",
     "section": "",
-    "text": "ctrl-p, quarto: Create New Project."
+    "text": "Video\nvideo demo\n\n\n\n\nTEC har nogle billige “kompatible” OLED displays som er nogenlunde kompatible med AdaFruits tilsvarende. Vi har fået fat i nogen fra producenten DIYmore.\n\nAdaFruits produkt og endnu en udgave af SSD1306\nDe kan altså bruge driverne, som AdaFruit har udviklet til SSD1306, til denne hardware også.\nAdaFruits driver til SSD1306 findes her\nMan kan kigge lidt til Random Nerd Tutorials ESP32 OLED Display with Arduino IDE, som har en vejledning til ESP32, dog med Arduino framework og et 128x64 pixels display.\nMens forbindelserne er næsten de samme. har jeg dog haft hæld med nogle andre pins. Desuden er vores displays 128x32 pixels.\n\n\n\n\nFor at bruge OLED displayet sammen med nanoFramework og C#, kan vi bruge device-driveren dss13xx, og dette kode eksemplet. For at bekræfte at det virker, har jeg implementeret og afprøvet med … som er i mit egent git repo på GitHub.\nDet der mangler, i de officielle vejledninger er en konkret opstilling, og et billede eller digram af hvor dan det hele forbindes. Man kan let blive i tvivl om hvor mange ben der “bør” være på displayet, og hvor de skal tilsluttes. Det gør at der er mange valg og dermed fejl muligheder.\n\n\n\n\n\n\n\n\nfrizing med OLED\n\n\n\nTilslutninger\n\n\nESP32-DEVKIT-V1\nOLED display\n\n\n\n\n\nSDA\nD21\nData\n\n\nSCL\nD22\nClock\n\n\nVCC\n3v3\nForsyningsspænding (3,3V)\n\n\nGND\nGND\nJord, stel, nul, minus etc\n\n\n\nJeg vælger at følge kodeeksemplet, og sætte Data og Clock til hhv. D21 og D22. Hvis man kigger på Michanti’s ESP32-DOIT-DEV-KIT-V1, kan man se at port 21 og 22 er markeret lyssebly felter, hvor der står hhv. [SDA] og [SCL]. Desværre stemmer det ikke godt overens med tabellen i nanoFrameworks “ESP32 pinout”?\n\n\n\nMed Project -&gt; Manage Nuget Packages kan du sørge for at det nødvendige pakker er til stede. Du kan også se pakkerne og ders oprindelse i filen packages.config:\n&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;\n&lt;packages&gt;\n  &lt;package id=\"nanoFramework.CoreLibrary\" version=\"1.17.11\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.Hardware.Esp32\" version=\"1.6.34\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.Iot.Device.Ssd13xx\" version=\"1.3.721\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.Runtime.Events\" version=\"1.11.32\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.System.Device.Gpio\" version=\"1.1.57\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.System.Device.I2c\" version=\"1.1.29\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.System.Math\" version=\"1.5.116\" targetFramework=\"netnano1.0\" /&gt;\n&lt;/packages&gt;\nBemærk: I sourcen herunder, refereres også til namespace’et Iot.Device.Ssd13xx.Samples, men det er ikke et assembly eller en NuGet pakke, men derimod defineret i to filer, som ligger med i projektet; BasicFont.cs og DoubleByteFont.cs.\n\n\n\nI demoen initialiseres pin 21 og pin 22, og SSD1306 driveren.\nSelve OLED driveren fungerer sådan at man\n\nrenser displayet (med ClearScreen())\ntegner eller skriver noget på display’et (egentlig tegner “bare” i en buffer)\nHer et f.eks. kald til device.DrawString(2, 2, \"nF IOT!\", 2)\ndet man har tegnet eller skrevet, vises på displayet, ved kald til Display().\n\nBemærk: Det er vigtigt at filerne BasicFont.cs og DoubleByteFont.cs er med, for de definerer namespacet Iot.Device.Ssd13xx.Samples og Class BasicFont og DoubleByteFont. Uden en font kan man ikke skrive tekst og så virker eksemplet ikke.\n// Licensed to the .NET Foundation under one or more agreements.\n// The .NET Foundation licenses this file to you under the MIT license.\n\nusing Iot.Device.Ssd13xx;\nusing Iot.Device.Ssd13xx.Samples;\nusing nanoFramework.Hardware.Esp32;\nusing System.Device.I2c;\nusing System.Diagnostics;\nusing System.Threading;\n\nDebug.WriteLine(\"Hello Ssd1306 Sample!\");\n\n//////////////////////////////////////////////////////////////////////\n// when connecting to an ESP32 device, need to configure the I2C GPIOs\n// used for the bus, for example\nConfiguration.SetPinFunction(21, DeviceFunction.I2C1_DATA);\nConfiguration.SetPinFunction(22, DeviceFunction.I2C1_CLOCK);\n//////////////////////////////////////////////////////////////////////\n\nusing Ssd1306 device = new Ssd1306(\n    I2cDevice.Create(new I2cConnectionSettings(1, Ssd1306.DefaultI2cAddress)), \n    Ssd13xx.DisplayResolution.OLED128x32);\n\ndevice.ClearScreen();\ndevice.Font = new BasicFont();\ndevice.DrawString(2, 2, \"nF IOT!\", 2);//large size 2 font\ndevice.DrawString(2, 32, \"nanoFramework\", 1, true);//centered text\ndevice.Display();\nThread.Sleep(200);\n\ndevice.ClearScreen();\ndevice.Font = new BasicFont();\nfor (int i = 0; i &lt; 50; i++)\n{\n    int line = 1;\n    Debug.WriteLine($\"1, line++, $\\\"i: {i}\\\", 1\");\n    device.Write(1, line++, $\"i: {i}\", 1);\n    device.Write(1, line++, \"Hest!\", 1, true);\n    device.Display();\n    Thread.Sleep(500);\n}\n\nDebug.WriteLine(\"End of Ssd1306 Sample!\");\nThread.Sleep(Timeout.Infinite);\nHele demo-koden findes på https://github.com/s0ren/intro_til-IOT_med-CS/tree/master/OLED_z\nEksemplet er stærkt inspireret af: https://github.com/nanoframework/nanoFramework.IoT.Device/tree/develop/devices/Ssd13xx/samples",
+    "crumbs": [
+      "Home",
+      "Features",
+      "Oled display"
+    ]
   },
   {
-    "objectID": "playbook.html#website-oprettet-med-quarto",
-    "href": "playbook.html#website-oprettet-med-quarto",
-    "title": "17682 Iot og embeddede systemer, del 1",
+    "objectID": "Features/Oled.html#baggrund",
+    "href": "Features/Oled.html#baggrund",
+    "title": "Oled display",
     "section": "",
-    "text": "ctrl-p, quarto: Create New Project."
+    "text": "TEC har nogle billige “kompatible” OLED displays som er nogenlunde kompatible med AdaFruits tilsvarende. Vi har fået fat i nogen fra producenten DIYmore.\n\nAdaFruits produkt og endnu en udgave af SSD1306\nDe kan altså bruge driverne, som AdaFruit har udviklet til SSD1306, til denne hardware også.\nAdaFruits driver til SSD1306 findes her\nMan kan kigge lidt til Random Nerd Tutorials ESP32 OLED Display with Arduino IDE, som har en vejledning til ESP32, dog med Arduino framework og et 128x64 pixels display.\nMens forbindelserne er næsten de samme. har jeg dog haft hæld med nogle andre pins. Desuden er vores displays 128x32 pixels.",
+    "crumbs": [
+      "Home",
+      "Features",
+      "Oled display"
+    ]
   },
   {
-    "objectID": "playbook.html#tilføj-git-og-put-på-github",
-    "href": "playbook.html#tilføj-git-og-put-på-github",
-    "title": "17682 Iot og embeddede systemer, del 1",
-    "section": "Tilføj git og put på github",
-    "text": "Tilføj git og put på github\nVælg Source Control ikonet længst til venstre, og tryk Publish to GitHub."
+    "objectID": "Features/Oled.html#c-driver-og-eksempel",
+    "href": "Features/Oled.html#c-driver-og-eksempel",
+    "title": "Oled display",
+    "section": "",
+    "text": "For at bruge OLED displayet sammen med nanoFramework og C#, kan vi bruge device-driveren dss13xx, og dette kode eksemplet. For at bekræfte at det virker, har jeg implementeret og afprøvet med … som er i mit egent git repo på GitHub.\nDet der mangler, i de officielle vejledninger er en konkret opstilling, og et billede eller digram af hvor dan det hele forbindes. Man kan let blive i tvivl om hvor mange ben der “bør” være på displayet, og hvor de skal tilsluttes. Det gør at der er mange valg og dermed fejl muligheder.",
+    "crumbs": [
+      "Home",
+      "Features",
+      "Oled display"
+    ]
   },
   {
-    "objectID": "playbook.html#for-at-publicere-på-github-pages",
-    "href": "playbook.html#for-at-publicere-på-github-pages",
-    "title": "17682 Iot og embeddede systemer, del 1",
-    "section": "For at publicere på github pages",
-    "text": "For at publicere på github pages\nkørete alle disse:\ngit checkout --orphan gh-pages\ngit reset --hard # make sure all changes are committed before running this!\ngit commit --allow-empty -m \"Initialising gh-pages branch\"\ngit push origin gh-pages\nog skiftede tilbage til main branch\nHerfra kan man publisere med kommandoen\nquarto publish gh-pages\nSvar Yes"
+    "objectID": "Features/Oled.html#demo-projekt",
+    "href": "Features/Oled.html#demo-projekt",
+    "title": "Oled display",
+    "section": "",
+    "text": "frizing med OLED\n\n\n\nTilslutninger\n\n\nESP32-DEVKIT-V1\nOLED display\n\n\n\n\n\nSDA\nD21\nData\n\n\nSCL\nD22\nClock\n\n\nVCC\n3v3\nForsyningsspænding (3,3V)\n\n\nGND\nGND\nJord, stel, nul, minus etc\n\n\n\nJeg vælger at følge kodeeksemplet, og sætte Data og Clock til hhv. D21 og D22. Hvis man kigger på Michanti’s ESP32-DOIT-DEV-KIT-V1, kan man se at port 21 og 22 er markeret lyssebly felter, hvor der står hhv. [SDA] og [SCL]. Desværre stemmer det ikke godt overens med tabellen i nanoFrameworks “ESP32 pinout”?\n\n\n\nMed Project -&gt; Manage Nuget Packages kan du sørge for at det nødvendige pakker er til stede. Du kan også se pakkerne og ders oprindelse i filen packages.config:\n&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;\n&lt;packages&gt;\n  &lt;package id=\"nanoFramework.CoreLibrary\" version=\"1.17.11\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.Hardware.Esp32\" version=\"1.6.34\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.Iot.Device.Ssd13xx\" version=\"1.3.721\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.Runtime.Events\" version=\"1.11.32\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.System.Device.Gpio\" version=\"1.1.57\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.System.Device.I2c\" version=\"1.1.29\" targetFramework=\"netnano1.0\" /&gt;\n  &lt;package id=\"nanoFramework.System.Math\" version=\"1.5.116\" targetFramework=\"netnano1.0\" /&gt;\n&lt;/packages&gt;\nBemærk: I sourcen herunder, refereres også til namespace’et Iot.Device.Ssd13xx.Samples, men det er ikke et assembly eller en NuGet pakke, men derimod defineret i to filer, som ligger med i projektet; BasicFont.cs og DoubleByteFont.cs.\n\n\n\nI demoen initialiseres pin 21 og pin 22, og SSD1306 driveren.\nSelve OLED driveren fungerer sådan at man\n\nrenser displayet (med ClearScreen())\ntegner eller skriver noget på display’et (egentlig tegner “bare” i en buffer)\nHer et f.eks. kald til device.DrawString(2, 2, \"nF IOT!\", 2)\ndet man har tegnet eller skrevet, vises på displayet, ved kald til Display().\n\nBemærk: Det er vigtigt at filerne BasicFont.cs og DoubleByteFont.cs er med, for de definerer namespacet Iot.Device.Ssd13xx.Samples og Class BasicFont og DoubleByteFont. Uden en font kan man ikke skrive tekst og så virker eksemplet ikke.\n// Licensed to the .NET Foundation under one or more agreements.\n// The .NET Foundation licenses this file to you under the MIT license.\n\nusing Iot.Device.Ssd13xx;\nusing Iot.Device.Ssd13xx.Samples;\nusing nanoFramework.Hardware.Esp32;\nusing System.Device.I2c;\nusing System.Diagnostics;\nusing System.Threading;\n\nDebug.WriteLine(\"Hello Ssd1306 Sample!\");\n\n//////////////////////////////////////////////////////////////////////\n// when connecting to an ESP32 device, need to configure the I2C GPIOs\n// used for the bus, for example\nConfiguration.SetPinFunction(21, DeviceFunction.I2C1_DATA);\nConfiguration.SetPinFunction(22, DeviceFunction.I2C1_CLOCK);\n//////////////////////////////////////////////////////////////////////\n\nusing Ssd1306 device = new Ssd1306(\n    I2cDevice.Create(new I2cConnectionSettings(1, Ssd1306.DefaultI2cAddress)), \n    Ssd13xx.DisplayResolution.OLED128x32);\n\ndevice.ClearScreen();\ndevice.Font = new BasicFont();\ndevice.DrawString(2, 2, \"nF IOT!\", 2);//large size 2 font\ndevice.DrawString(2, 32, \"nanoFramework\", 1, true);//centered text\ndevice.Display();\nThread.Sleep(200);\n\ndevice.ClearScreen();\ndevice.Font = new BasicFont();\nfor (int i = 0; i &lt; 50; i++)\n{\n    int line = 1;\n    Debug.WriteLine($\"1, line++, $\\\"i: {i}\\\", 1\");\n    device.Write(1, line++, $\"i: {i}\", 1);\n    device.Write(1, line++, \"Hest!\", 1, true);\n    device.Display();\n    Thread.Sleep(500);\n}\n\nDebug.WriteLine(\"End of Ssd1306 Sample!\");\nThread.Sleep(Timeout.Infinite);\nHele demo-koden findes på https://github.com/s0ren/intro_til-IOT_med-CS/tree/master/OLED_z\nEksemplet er stærkt inspireret af: https://github.com/nanoframework/nanoFramework.IoT.Device/tree/develop/devices/Ssd13xx/samples",
+    "crumbs": [
+      "Home",
+      "Features",
+      "Oled display"
+    ]
   }
 ]
