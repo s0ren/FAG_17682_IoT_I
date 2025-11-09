@@ -1,6 +1,7 @@
 ---
 title: "Features"
 format: html
+order: 300
 ---
 
 Her finder du nogle vejledninger af ting som man kan med ESP32 og nanoFramework.

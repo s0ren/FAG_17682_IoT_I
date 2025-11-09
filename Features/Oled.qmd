@@ -1,6 +1,6 @@
 ---
 title: "Oled display"
-order: 1
+order: 301
 # subtitle: "ved brug af Adafruit SSD1306 og kompatible"
 # Institute: TEC
 # lang: da-DK

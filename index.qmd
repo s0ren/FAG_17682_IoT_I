@@ -3,6 +3,8 @@ title: "IoT H3"
 subtitle: "Internet of things, på hovedforløb 3"
 Institute: TEC
 lang: da-DK
+
+order: 1
 ---
 
 # IoT, første del
