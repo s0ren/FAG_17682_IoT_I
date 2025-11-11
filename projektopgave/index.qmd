@@ -41,7 +41,7 @@ Der findes allerede en del pudukter på markedet, både industrielle og til home
 |                                      |                                      |
 |----------------------------------------|--------------------------------|
 | ![](images/paste-1.png){width="200"} | ![](images/paste-2.png){width="239"} |
-| [@noauthor_smart_nodate]             | [@tado_smart_2025]                   |
+| [@netatmo_smart_2025]                | [@tado_smart_2025]                   |
 
 Du behøver slet ikke implemetere alle features som de kommercielle produkter har.
 
@@ -190,7 +190,7 @@ Den ene er en vejledning til slutbrugeren, den anden er en vejledning til den pe
 
 Slutbrugeren kunne f.eks. være min mor, hvis hun havde fået det her apparat sat op der hjemme.
 
-Hun skal forstå hvad hun kan se på displayet, og trykke på det to knapper, `+` og `-`. \
+Hun skal forstå hvad hun kan se på displayet, og trykke på det to knapper, `+` og `-`.\
 Eventuelt også på hendes smartphone. Min mor har ikke en smartphone, men det har min far, han kan bare ikke finde ud af at bruge den :-)
 
 Denne vejledning fylder en halv til en hel side. Der må gerne være et billede, så slutbrugeren kan se hvad der er der forklares.
@@ -199,6 +199,6 @@ Denne vejledning fylder en halv til en hel side. Der må gerne være et billede,
 
 Der skal også være en vejledning til operatøren. Det er den person som pakker apparatet ud, og installerer det på netværket. Der skal være en forklaring på hvordan netværk konfigureres og hvad konfigurationsoplysningerne gør.
 
-Der skal også være et fritzing-diagram som viser opbygningen, enten med fritzing [@gonmei_gggonmeifritzing_2025] eller et alternativ, f.eks. wokwi [@wokwi_wokwi_nodate].
+Der skal også være et fritzing-diagram som viser opbygningen, enten med fritzing [@gonmei_gggonmeifritzing_2025] eller et alternativ, f.eks. wokwi [@wokwi_wokwi_2025].
 
 Desuden skal der være en forklaring på hvilke data som overføres til dataloggeren.
