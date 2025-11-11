@@ -95,7 +95,7 @@
     "href": "projektopgave/index.html#lignende-produkter-på-markedet",
     "title": "Projektopgave",
     "section": "1 Lignende produkter på markedet",
-    "text": "1 Lignende produkter på markedet\nDer findes allerede en del pudukter på markedet, både industrielle og til homeautomation. Her er et par eksempler:\n\n\n\n\n\n\n\n\n\n\n\n(“Smart og tilsluttet termostat. Netatmo” u.å.)\n(Tado 2025)\n\n\n\nDu behøver slet ikke implemetere alle features som de kommercielle produkter har.",
+    "text": "1 Lignende produkter på markedet\nDer findes allerede en del pudukter på markedet, både industrielle og til homeautomation. Her er et par eksempler:\n\n\n\n\n\n\n\n\n\n\n\n(Netatmo 2025)\n(Tado 2025)\n\n\n\nDu behøver slet ikke implemetere alle features som de kommercielle produkter har.",
     "crumbs": [
       "Home",
       "Projektopgave"
@@ -161,7 +161,7 @@
     "href": "projektopgave/index.html#sec-Dokumentation",
     "title": "Projektopgave",
     "section": "7 Dokumentation",
-    "text": "7 Dokumentation\nTil projektopgaven hører noget dokumentation.\nDu skal lave to brugervejledninger, men ikke en fuld rapport.\nDen ene er en vejledning til slutbrugeren, den anden er en vejledning til den person der skal opsætte og installere apparatet.\n\n7.1 Slutbrugervejledning\nSlutbrugeren kunne f.eks. være min mor, hvis hun havde fået det her apparat sat op der hjemme.\nHun skal forstå hvad hun kan se på displayet, og trykke på det to knapper, + og -.\nEventuelt også på hendes smartphone. Min mor har ikke en smartphone, men det har min far, han kan bare ikke finde ud af at bruge den :-)\nDenne vejledning fylder en halv til en hel side. Der må gerne være et billede, så slutbrugeren kan se hvad der er der forklares.\n\n\n7.2 Operatørvejledning\nDer skal også være en vejledning til operatøren. Det er den person som pakker apparatet ud, og installerer det på netværket. Der skal være en forklaring på hvordan netværk konfigureres og hvad konfigurationsoplysningerne gør.\nDer skal også være et fritzing-diagram som viser opbygningen, enten med fritzing (Gonmei 2025) eller et alternativ, f.eks. wokwi (Wokwi u.å.).\nDesuden skal der være en forklaring på hvilke data som overføres til dataloggeren.",
+    "text": "7 Dokumentation\nTil projektopgaven hører noget dokumentation.\nDu skal lave to brugervejledninger, men ikke en fuld rapport.\nDen ene er en vejledning til slutbrugeren, den anden er en vejledning til den person der skal opsætte og installere apparatet.\n\n7.1 Slutbrugervejledning\nSlutbrugeren kunne f.eks. være min mor, hvis hun havde fået det her apparat sat op der hjemme.\nHun skal forstå hvad hun kan se på displayet, og trykke på det to knapper, + og -.\nEventuelt også på hendes smartphone. Min mor har ikke en smartphone, men det har min far, han kan bare ikke finde ud af at bruge den :-)\nDenne vejledning fylder en halv til en hel side. Der må gerne være et billede, så slutbrugeren kan se hvad der er der forklares.\n\n\n7.2 Operatørvejledning\nDer skal også være en vejledning til operatøren. Det er den person som pakker apparatet ud, og installerer det på netværket. Der skal være en forklaring på hvordan netværk konfigureres og hvad konfigurationsoplysningerne gør.\nDer skal også være et fritzing-diagram som viser opbygningen, enten med fritzing (Gonmei 2025) eller et alternativ, f.eks. wokwi (Wokwi 2025).\nDesuden skal der være en forklaring på hvilke data som overføres til dataloggeren.",
     "crumbs": [
       "Home",
       "Projektopgave"
